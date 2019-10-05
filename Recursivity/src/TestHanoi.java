@@ -2,7 +2,7 @@ public class TestHanoi {
     private static int step = 0;
 
     public static void main(String[] args) {
-        hanoi(3, "A", "B", "C");
+        hanoi(33, "A", "B", "C");
     }
 
     private static void hanoi(int n, String start, String temp, String end) {
@@ -13,7 +13,7 @@ public class TestHanoi {
         // Pas récursif
         hanoi(n - 1, start, end, temp);
         step++;
-        System.out.println(step + " / " + start + " -> " + end);
+        System.out.println(step + " \t " + start + " -> " + end);
         hanoi(n - 1, temp, start, end);
     }
 }
